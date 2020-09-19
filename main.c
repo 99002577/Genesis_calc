@@ -12,7 +12,7 @@ int calculator_operand1 = 0;
 int calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, FACTORIAL, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, FACTORIAL,ODD_EVEN,PALINDROME EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 void calculator_menu(void)
 {
     printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Exit");
+    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Factorial\n6. Odd_Even\n7. Palindrome \n8. Exit");
     printf("\n\tEnter your choice\n");
    
      __fpurge(stdin);
@@ -113,7 +113,34 @@ void calculator_menu(void)
   /* Recursively calculate Factorial of the number */
   return operand1 * factorial(operand1-1);
 }
-
+case ODD_EVEN(int operand1)
+{
+    /*return -1 when odd */
+    if(operand1%2!=0)
+        return -1;
+    /*returns 0 when even */
+    if(operand1%2==0)
+        return 0;
+}
+ case PALINDROME:
+            int palindrome(int operand1)
+            {
+                int temp,remain,sum=0;
+                temp=operand1;
+                while(operand1!=0)
+                {
+                    remain=operand1%10;
+                    sum=sum*10+remain;
+                    operand1/=10;
+                }
+                if(sum==temp)
+                    /* returns 0 when palindrome */
+                    return 0;
+                else 
+                    /* returns 0 -1 for non palindrome */
+                    return -1;
+            }
+                    
         case 6:
             exit(0);
             break;
