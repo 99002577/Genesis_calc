@@ -36,3 +36,31 @@ int factorial(int operand1)
   /* Recursively calculate Factorial of the number */
   return operand1 * factorial(operand1-1);
 }
+
+int odd_even(int operand1)
+{
+   
+    if(operand1%2!=0)
+        /*returns -1 when odd*/
+        return -1;
+    if(operand1%2==0)
+        /*returns 0 when even*/
+        return 0;
+}
+int palindrome(int operand1)
+{
+    int temp, remain,sum=0;
+    temp=operand1;
+    while(operand1!=0)
+    {
+        remain=operand1%10;
+        sum=sum*10+ remain;
+        operand1/=10;
+    }
+    if(sum==temp)
+        /*return 0 when number is palindrome*/
+        return 0;
+    else
+        /*returns -1 when not plaindrome*/
+        return -1;
+}
