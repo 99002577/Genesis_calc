@@ -12,7 +12,7 @@ int calculator_operand1 = 0;
 int calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, FACTORIAL, EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -99,6 +99,7 @@ void calculator_menu(void)
             getchar();
             break;
       case FACTORIAL:
+            
       int factorial(int operand1)
 {
   /* Return -1 for negative numbers */
@@ -113,7 +114,7 @@ void calculator_menu(void)
   return operand1 * factorial(operand1-1);
 }
 
-        case 5:
+        case 6:
             exit(0);
             break;
         default:
