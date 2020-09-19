@@ -44,7 +44,13 @@ int multiply(int operand1, int operand2);
 * @note returns 0 for divide by 0 error
 */
 int divide(int operand1, int operand2);
+/*TO perform divison*/
 
 int factorial(int operand1);
+/*to check factorial*/
+int odd_even(int operand1);
+/*to check odd even*/
+int palindrome(int operand1);
+/*to check palindrome*/
 
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
